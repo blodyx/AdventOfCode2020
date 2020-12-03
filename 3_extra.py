@@ -1,14 +1,13 @@
 lines = open("input/3.input", "r").readlines()
 
-product=1
+tests=[]
 maxx=len(lines)
 maxy=len(lines[0])-1
-test=[[1,1],[1,3],[1,5],[1,7],[2,1]]
 
-for cx,cy in test:
+for cx in range(10,19):
+  for cy in range(10,19):
     tree=x=y=0
     while x<maxx:
-
         if lines[x][y] == '#':
             tree+=1
         x+=cx
@@ -16,6 +15,5 @@ for cx,cy in test:
 
         if y>=maxy:
             y=y-maxy
-
-    product *= tree
-print product
+    tests.append([cx,cy,tree])
+print tests
