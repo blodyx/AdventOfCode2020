@@ -53,7 +53,7 @@ def validate(passport):
                 ecl = 1
 
         if "pid" == test:
-            if len(rest)==9:
+            if len(rest)==9 and int(rest):
                 print rest
                 pid = 1
 
