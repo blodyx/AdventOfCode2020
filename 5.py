@@ -1,4 +1,3 @@
-import re
 lines = open("input/5.input", "r").readlines()
 seatid=[]
 for l in lines:
